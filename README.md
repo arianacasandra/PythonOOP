@@ -1,6 +1,6 @@
 # MathOps Service
 
-Acesta este un microserviciu dezvoltat ca parte din AI Academy @ Endava, având ca scop expunerea unui API REST pentru operații matematice fundamentale și persistarea cererilor într-o bază de date SQLite.
+Acesta este un microserviciu, având ca scop expunerea unui API REST pentru operații matematice fundamentale și persistarea cererilor într-o bază de date SQLite.
 
 ## Caracteristici principale
 
