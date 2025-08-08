@@ -1,8 +1,11 @@
 from math import pow as math_pow
+from functools import lru_cache
+
 
 def calculate_pow(x: float, y: float) -> float:
     return math_pow(x, y)
 
+@lru_cache(maxsize=128)
 def calculate_fibonacci(n: int) -> int:
     a, b = 0, 1
     for _ in range(n):
