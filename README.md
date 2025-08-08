@@ -1,6 +1,6 @@
 # MathOps Service
 
-Acesta este un microserviciu, având ca scop expunerea unui API REST pentru operații matematice fundamentale și persistarea cererilor într-o bază de date SQLite.
+Acesta este un microserviciu, având ca scop expunerea unui API REST pentru operații matematice fundamentale și persistarea cererilor într-o bază de date SQLite. Am realizat tema cu Bodogae Stefan George
 
 ## Caracteristici principale
 
@@ -97,6 +97,17 @@ Toate cererile sunt salvate în baza de date SQLite `app/operations.db`, în tab
 - `result` (TEXT)
 - `timestamp` (TEXT, ISO 8601 UTC)
 
+
+## Funcționalități opționale implementate
+
+Următoarele bune practici și optimizări au fost adăugate peste cerințele de bază:
+
+### Caching (`@lru_cache`)
+Funcția `fibonacci(n)` este optimizată folosind caching (`functools.lru_cache`) pentru a evita recalcularea acelorași valori, îmbunătățind semnificativ performanța în cazul valorilor mari sau apelurilor repetate.
+
+### Logging structurat
+Aplicația utilizează modulul `logging` pentru a înregistra toate cererile către API. Se loghează tipul operației, parametrii și rezultatul, într-un format standardizat:
+
 ## Extensibilitate și bune practici
 
 - Codul este organizat pe layere: **models**, **calculator**, **db**, **api**.
@@ -108,6 +119,4 @@ Toate cererile sunt salvate în baza de date SQLite `app/operations.db`, în tab
   - Autentificare JWT
 
 ---
-
-Proiect realizat de un student al AI Academy @ Endava, ca exercițiu de aplicație a conceptelor de microservicii și API design.
 
